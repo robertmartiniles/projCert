@@ -1,4 +1,5 @@
 FROM devopsedu/webapp
+RUN apt-get install lynx
 COPY website/ /var/www/html
 RUN rm -f /var/www/html/*.html
 RUN rm -f /var/log/apache2/*.log
