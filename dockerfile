@@ -2,6 +2,8 @@ FROM devopsedu/webapp
 RUN apt-get update
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y apache2
+RUN rm -f /var/www/html/*.html
+RUN rm -f /var/log/apache2/*.log
 COPY website/ /var/www/html
 EXPOSE 80
 WORKDIR /usr/sbin
